@@ -1,0 +1,90 @@
+---
+title: "Cac ky thuat regex thuong gap"
+author: "Truong Nhi"
+output:
+  html_document: default
+  word_document: default
+editor_options:
+  chunk_output_type: console
+---
+
+<!-- YAML: phan settings dinh nghia format file output -->
+
+<!-- word, excel, powper point -->
+<!-- irreproducible report -->
+
+<!-- markdown, rmarkdown, latex, quarto -->
+<!-- reproducible report -->
+
+<!-- teacher/boss want to verify result. -->
+
+# De bai
+
+Ta co vector `x_1`
+
+```{r}
+# code chunk
+# dau comment la dau # khi trong code chunk
+x_1 <- c("ab*c", "bac*", "cab", "aab*b", "a", "b*", "c", "ccbb", " ", "c a b", "bbbca")
+x_1
+```
+
+
+```{r}
+
+# de bai trich xuat cac ky tu chua chu a va *
+x_1
+
+
+# CACH 1: su dung regex
+# uu diem la nhanh gon
+# nhuoc diem la phuc tap, ko biet, phai hoi chat gpt
+grep("(?=.*a)(?=.*\\*)", 
+     x_1,
+     perl = TRUE, # su dung cu phap regex phu hop tu ngon ngu perl
+     value = TRUE)
+
+# CACH 2: trich xuat thu cong
+
+grep(pattern = "\\*",
+     x_1,
+     value = T) -> x_1a
+
+grep(pattern = "a",
+     x_1a,
+     value = T)
+```
+
+
+```{r}
+r <- seq(from = 1,
+         to = 30,
+         by = 2)
+r
+
+r <- seq(from = 1,
+         to = 30,
+         by = -2)
+r
+
+
+r <- seq(from = 30,
+         to = 1,
+         by = -2)
+r
+
+r <- seq(from = 30,
+         to = 1,
+         by = 2)
+r
+```
+
+
+
+
+
+
+
+
+
+
