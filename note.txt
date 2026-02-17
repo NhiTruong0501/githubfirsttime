@@ -1,4 +1,3 @@
 GitHub la Phuong phap control versioning
-
-nghia la: ta co cac phien ban khac nhau cua 1 file code, ta co the truy xuat lai phien ban cu de dang.
+aaaa
 
